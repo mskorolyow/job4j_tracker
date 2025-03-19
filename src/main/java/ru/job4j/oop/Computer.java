@@ -20,9 +20,9 @@ public class Computer {
     }
 
     public static void main(String[] args) {
-        Computer computer = new Computer(true,4000,"Intel Core I7-10700K");
+        Computer computer = new Computer(true, 4000, "Intel Core I7-10700K");
         computer.printInfo();
-        Computer comp = new Computer(true,1000,"AMD Ryzen 5 3600");
+        Computer comp = new Computer(true, 1000, "AMD Ryzen 5 3600");
         comp.printInfo();
         Computer comp1 = new Computer();
         comp1.printInfo();
