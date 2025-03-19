@@ -3,6 +3,7 @@ package ru.job4j.oop;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
+
 class BatteryTest {
     @Test
     public void whenThis30Another50ThenAnotherLoadEqual80() {

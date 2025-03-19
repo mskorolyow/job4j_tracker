@@ -6,13 +6,16 @@ public class Battery {
     public Battery(int load) {
         this.load = load;
     }
+
     public String about() {
         return "My charge: " + load + "%";
     }
+
     public void exchange(Battery another) {
         another.load += this.load;
         this.load -= this.load;
     }
+
     public static void main(String[] args) {
         Battery first = new Battery(70);
         Battery second = new Battery(30);
