@@ -6,8 +6,9 @@ public class Reduce {
     public void to(int[] array) {
         this.array = array;
     }
+
     public void print() {
-        for (int i = 0; i < array.length ; i++) {
+        for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
         }
     }
