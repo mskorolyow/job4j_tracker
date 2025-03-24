@@ -6,8 +6,7 @@ public class Shop {
         product[0] = new Product("Milk", 10);
         product[1] = new Product("Bread", 4);
         product[2] = new Product("Egg", 19);
-        for (Product prod :
-                product) {
+        for (Product prod : product) {
             if (prod != null) {
                 System.out.println(prod.getName());
             }
