@@ -26,13 +26,11 @@ public class Tracker {
         Item[] result = new Item[items.length];
         int j = 0;
         for (int i = 0; i < size; i++) {
-            if (items[i] != null) {
                 Item item = items[i];
                 if (item.getName().equals(key)) {
                     result[j] = item;
                     j++;
                 }
-            }
         }
         return Arrays.copyOf(result, j);
     }
@@ -56,5 +54,10 @@ public class Tracker {
             items[index] = item;
             return true;
         }
+    }
+
+    public void delete(int id) {
+        int index = indexOf(id);
+        items[index] = null;
     }
 }
