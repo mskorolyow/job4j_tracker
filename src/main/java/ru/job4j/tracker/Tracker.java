@@ -2,6 +2,10 @@ package ru.job4j.tracker;
 
 import java.util.Arrays;
 
+/**
+ * //System.arraycopy(items, index + 1, items, index, size - index - 1);
+ * Закинуть в метод delete, при необходимости, урок: https://job4j.ru/profile/exercise/22/task/161/538354
+ */
 public class Tracker {
     private final Item[] items = new Item[100];
     private int ids = 0;
@@ -26,11 +30,11 @@ public class Tracker {
         Item[] result = new Item[items.length];
         int j = 0;
         for (int i = 0; i < size; i++) {
-                Item item = items[i];
-                if (item.getName().equals(key)) {
-                    result[j] = item;
-                    j++;
-                }
+            Item item = items[i];
+            if (item.getName().equals(key)) {
+                result[j] = item;
+                j++;
+            }
         }
         return Arrays.copyOf(result, j);
     }
@@ -63,6 +67,5 @@ public class Tracker {
         if (items.length > id) {
             items[index] = null;
         }
-        //System.arraycopy(items, index + 1, items, index, size - index - 1);
     }
 }
