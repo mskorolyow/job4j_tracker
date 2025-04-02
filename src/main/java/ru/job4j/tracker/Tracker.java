@@ -5,7 +5,8 @@ import java.util.Arrays;
  *
  *  @author kmc
  *  System.arraycopy(items, index + 1, items, index, size - index - 1);
- *  Закинуть в метод delete, при необходимости, урок: https://job4j.ru/profile/exercise/22/task/161/538354
+ *  Закинуть в метод delete, при необходимости, урок:
+ *  @link "https://job4j.ru/profile/exercise/22/task/161/538354"
  */
 public class Tracker {
     private final Item[] items = new Item[100];
