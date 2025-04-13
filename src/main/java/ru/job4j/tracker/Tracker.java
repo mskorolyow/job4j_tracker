@@ -1,12 +1,12 @@
 package ru.job4j.tracker;
 
 import java.util.Arrays;
+
 /**
- *
- *  @author kmc
- *  System.arraycopy(items, index + 1, items, index, size - index - 1);
- *  Закинуть в метод delete, при необходимости, урок:
- *  @link "https://job4j.ru/profile/exercise/22/task/161/538354"
+ * @author kmc
+ * System.arraycopy(items, index + 1, items, index, size - index - 1);
+ * Закинуть в метод delete, при необходимости, урок:
+ * @link "https://job4j.ru/profile/exercise/22/task/161/538354"
  */
 public class Tracker {
     private final Item[] items = new Item[100];
@@ -66,8 +66,11 @@ public class Tracker {
 
     public void delete(int id) {
         int index = indexOf(id);
-        if (items.length > id) {
+        if (index >= 0) {
             items[index] = null;
+            System.arraycopy(items, index + 1, items, index, size - index - 1);
+            items[size - 1] = null;
+            size--;
         }
     }
 }
