@@ -6,11 +6,11 @@ import java.util.Arrays;
  * @author kmc
  * System.arraycopy(items, index + 1, items, index, size - index - 1);
  * Закинуть в метод delete, при необходимости, урок:
- * @link "https://job4j.ru/profile/exercise/22/task/161/538354"
+ * @link "<a href="https://job4j.ru/profile/exercise/22/task/161/538354">...</a>"
  */
 public class Tracker {
     private final Item[] items = new Item[100];
-    private int ids = 0;
+    private int ids = 1;
     private int size = 0;
 
     public Item add(Item item) {
@@ -59,6 +59,7 @@ public class Tracker {
         if (index == -1) {
             return false;
         } else {
+            item.setId(id);
             items[index] = item;
             return true;
         }
