@@ -55,32 +55,23 @@ public class Tracker {
     }
 
     public boolean replace(int id, Item item) {
-        if (id >= 0) {
-            int index = indexOf(id);
-            if (index == -1) {
-                return false;
-            } else {
-                item.setId(id);
-                items[index] = item;
-                return true;
-            }
-        } else {
-            System.out.println("Полученный параметр id вне зоны допустимых значений. ");
+        int index = indexOf(id);
+        boolean result = (id >= 0) && (index != -1);
+        if (result) {
+            item.setId(id);
+            items[index] = item;
         }
-        return false;
+        return result;
     }
 
     public void delete(int id) {
-        if (id >= 0) {
-            int index = indexOf(id);
-            if (index >= 0) {
-                items[index] = null;
-                System.arraycopy(items, index + 1, items, index, size - index - 1);
-                items[size - 1] = null;
-                size--;
-            }
-        } else {
-            System.out.println("Введённый парметр выходит за допустимые значения. ");
+        int index = indexOf(id);
+        boolean result = (id >= 0) && (index >= 0);
+        if (result) {
+            items[index] = null;
+            System.arraycopy(items, index + 1, items, index, size - index - 1);
+            items[size - 1] = null;
+            size--;
         }
     }
 }
