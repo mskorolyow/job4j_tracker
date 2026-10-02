@@ -1,6 +1,5 @@
 package ru.job4j.tracker;
 
-import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class StartUI {
@@ -10,10 +9,16 @@ public class StartUI {
             showMenu();
             System.out.println("Выбрать: ");
             int select = Integer.parseInt(scanner.nextLine());
-            if (select != 6) {
-                System.out.println("Пользователь выбрал: " + select);
-            } else {
+            if (select == 0) {
+                System.out.println("=== Создание новой заявки ===");
+                System.out.println("Введите имя: ");
+                String name = scanner.nextLine();
+                Item item = new Item(name);
+                tracker.add(item);
+                System.out.println("Добавлена заявка: " + item);
+            } else if (select == 6) {
                 run = false;
+                System.out.println("Вы завершили выполнение программы. Досвидания!");
             }
         }
     }
