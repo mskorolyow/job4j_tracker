@@ -1,6 +1,6 @@
 package ru.job4j.polymorphism;
 
-public interface ITransport {
+public interface Transport {
     void move();
 
     void passengers(int count);

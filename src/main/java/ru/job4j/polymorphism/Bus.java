@@ -1,6 +1,6 @@
 package ru.job4j.polymorphism;
 
-public class Bus implements ITransport {
+public class Bus implements Transport {
     @Override
     public void move() {
         System.out.println("Bus is move.");
